@@ -1,27 +1,225 @@
-
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Saiket Project</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Customer Churn Analysis & Prediction | Portfolio</title>
     <style>
+        :root {
+            --primary: #0f172a;
+            --accent: #2563eb;
+            --bg: #f8fafc;
+            --card: #ffffff;
+            --text: #334155;
+            --muted: #64748b;
+            --border: #e2e8f0;
+        }
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+        }
         body {
-            font-family: Arial, sans-serif;
+            background-color: var(--bg);
+            color: var(--text);
+            line-height: 1.6;
+        }
+        header {
+            background: var(--primary);
+            color: #ffffff;
+            padding: 4rem 1.5rem;
             text-align: center;
-            background: #f2f5fa;
-            padding: 80px 20px;
         }
-
-        h1 {
-            color: #234b8c;
+        header h1 {
+            font-size: 2.25rem;
+            margin-bottom: 0.75rem;
+            letter-spacing: -0.02em;
         }
-
-        p {
-            color: #555;
+        header p {
+            color: #cbd5e1;
+            max-width: 650px;
+            margin: 0 auto 1.5rem;
+            font-size: 1.1rem;
+        }
+        .btn {
+            display: inline-block;
+            background: var(--accent);
+            color: #ffffff;
+            padding: 0.75rem 1.5rem;
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: background 0.2s;
+        }
+        .btn:hover {
+            background: #1d4ed8;
+        }
+        .container {
+            max-width: 960px;
+            margin: 0 auto;
+            padding: 2.5rem 1.5rem;
+        }
+        .metrics-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1.25rem;
+            margin-bottom: 2.5rem;
+        }
+        .metric-card {
+            background: var(--card);
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            padding: 1.5rem;
+            text-align: center;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.04);
+        }
+        .metric-card h3 {
+            font-size: 1.85rem;
+            color: var(--accent);
+            margin-bottom: 0.25rem;
+        }
+        .metric-card p {
+            font-size: 0.9rem;
+            color: var(--muted);
+            font-weight: 500;
+        }
+        section {
+            background: var(--card);
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            padding: 2rem;
+            margin-bottom: 1.75rem;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.04);
+        }
+        h2 {
+            color: var(--primary);
+            font-size: 1.35rem;
+            margin-bottom: 1rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 2px solid var(--bg);
+        }
+        ul {
+            padding-left: 1.25rem;
+        }
+        li {
+            margin-bottom: 0.65rem;
+        }
+        .tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            margin-top: 0.5rem;
+        }
+        .tag {
+            background: #eff6ff;
+            color: var(--accent);
+            border: 1px solid #bfdbfe;
+            padding: 0.35rem 0.75rem;
+            border-radius: 999px;
+            font-size: 0.85rem;
+            font-weight: 600;
+        }
+        .driver-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+        .driver-box {
+            background: var(--bg);
+            padding: 1.25rem;
+            border-radius: 6px;
+            border-left: 4px solid var(--accent);
+        }
+        .driver-box h4 {
+            color: var(--primary);
+            margin-bottom: 0.35rem;
+        }
+        footer {
+            text-align: center;
+            padding: 2rem 1rem;
+            color: var(--muted);
+            font-size: 0.9rem;
         }
     </style>
 </head>
 <body>
-    <h1>Welcome to Saiket</h1>
-    <p>My project is successfully hosted on GitHub Pages!</p>
+
+    <header>
+        <h1>Customer Churn Analysis & Prediction</h1>
+        <p>End-to-end exploratory data analysis and machine learning classification pipeline to identify at-risk customers and key attrition drivers.</p>
+        <a href="https://github.com/nuthigauri21/customer-churn-analysis-and-prediction" class="btn" target="_blank">View Source Code on GitHub</a>
+    </header>
+
+    <div class="container">
+        
+        <div class="metrics-grid">
+            <div class="metric-card">
+                <h3>~80%</h3>
+                <p>Model Accuracy</p>
+            </div>
+            <div class="metric-card">
+                <h3>2 Models</h3>
+                <p>Logistic Regression & Random Forest</p>
+            </div>
+            <div class="metric-card">
+                <h3>3 Metrics</h3>
+                <p>Precision, Recall & F1-Score</p>
+            </div>
+            <div class="metric-card">
+                <h3>3 Drivers</h3>
+                <p>Tenure, Contract & Monthly Charges</p>
+            </div>
+        </div>
+
+        <section>
+            <h2>Project Overview & Methodology</h2>
+            <ul>
+                <li><strong>Exploratory Data Analysis & Cleaning:</strong> Processed raw customer records using Python (Pandas, NumPy) to handle missing values, fix data types, and uncover churn distributions across demographics and service usage.</li>
+                <li><strong>Feature Engineering:</strong> Transformed categorical attributes via encoding and scaled numerical variables to prepare clean feature matrices for supervised learning.</li>
+                <li><strong>Classification Modeling:</strong> Built, trained, and compared <strong>Logistic Regression</strong> and <strong>Random Forest</strong> classifiers to predict customer attrition probability.</li>
+                <li><strong>Model Evaluation:</strong> Achieved <strong>~80% accuracy</strong> and validated model reliability on imbalanced churn classes using <strong>Precision, Recall, and F1-score</strong>.</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>Key Churn Drivers Identified</h2>
+            <p>Feature importance and correlation analysis revealed three primary factors influencing customer churn:</p>
+            <div class="driver-grid">
+                <div class="driver-box">
+                    <h4>1. Customer Tenure</h4>
+                    <p>New customers in their first few months show significantly higher churn rates compared to long-term subscribers.</p>
+                </div>
+                <div class="driver-box">
+                    <h4>2. Contract Type</h4>
+                    <p>Month-to-month contract holders churn at a substantially higher rate than customers locked into one- or two-year agreements.</p>
+                </div>
+                <div class="driver-box">
+                    <h4>3. Monthly Charges</h4>
+                    <p>Higher monthly billing tiers correlate strongly with increased attrition, especially when paired with short-term contracts.</p>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <h2>Tools & Technologies</h2>
+            <div class="tags">
+                <span class="tag">Python</span>
+                <span class="tag">Pandas</span>
+                <span class="tag">NumPy</span>
+                <span class="tag">Scikit-Learn</span>
+                <span class="tag">Logistic Regression</span>
+                <span class="tag">Random Forest</span>
+                <span class="tag">Exploratory Data Analysis (EDA)</span>
+            </div>
+        </section>
+
+    </div>
+
+    <footer>
+        <p>Built by Nuthigauri &bull; Hosted on GitHub Pages</p>
+    </footer>
+
 </body>
 </html>
