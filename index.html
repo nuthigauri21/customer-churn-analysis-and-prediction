@@ -211,8 +211,8 @@
         <section>
             <h2>Project Overview & Methodology</h2>
             <ul>
-                <li><strong>Exploratory Data Analysis & Cleaning:</strong> Processed raw customer records using Python (Pandas, NumPy) to handle missing values, fix data types, and uncover churn distributions across demographics and service usage.</li>
-                <li><strong>Feature Engineering:</strong> Transformed categorical attributes via encoding and scaled numerical variables to prepare clean feature matrices for supervised learning.</li>
+                <li><strong>Exploratory Data Analysis & Cleaning:</strong> Processed 7,043 customer records using Python (Pandas, NumPy) to handle missing values in TotalCharges, encode categorical variables, and uncover churn distributions across customer segments.</li>
+                <li><strong>Feature Engineering:</strong> Transformed categorical attributes via label encoding and structured clean train/test splits (80/20) to prepare feature matrices for supervised learning.</li>
                 <li><strong>Classification Modeling:</strong> Built, trained, and compared <strong>Logistic Regression</strong> and <strong>Random Forest</strong> classifiers to predict customer attrition probability.</li>
                 <li><strong>Model Evaluation:</strong> Achieved <strong>~80% accuracy</strong> and validated model reliability on imbalanced churn classes using <strong>Precision, Recall, and F1-score</strong>.</li>
             </ul>
@@ -220,7 +220,7 @@
 
         <section>
             <h2>Key Churn Drivers Identified</h2>
-            <p>Feature importance and correlation analysis revealed three primary factors influencing customer churn:</p>
+            <p>Exploratory analysis and model feature evaluation revealed three primary factors influencing customer churn:</p>
             <div class="driver-grid">
                 <div class="driver-box">
                     <h4>1. Customer Tenure</h4>
@@ -238,27 +238,27 @@
         </section>
 
         <section>
-            <h2>Visualizations & Model Results</h2>
+            <h2>Visualizations & Exploratory Data Analysis</h2>
             <div class="gallery-grid">
                 <div class="chart-card">
-                    <img src="images/feature_importance.png" alt="Feature Importance Chart">
-                    <h4>Feature Importance (Random Forest)</h4>
-                    <p>Highlights tenure, contract type, and monthly charges as the top predictors of customer churn.</p>
+                    <img src="images/churn_distribution.png" alt="Customer Churn Distribution">
+                    <h4>Overall Customer Churn Distribution</h4>
+                    <p>Illustrates class distribution across 7,043 Telco customers (73.5% retained vs. 26.5% churned).</p>
                 </div>
                 <div class="chart-card">
-                    <img src="images/confusion_matrix.png" alt="Model Confusion Matrix">
-                    <h4>Confusion Matrix & Evaluation</h4>
-                    <p>Visualizes true vs. predicted churn classifications supporting ~80% overall model accuracy.</p>
-                </div>
-                <div class="chart-card">
-                    <img src="images/churn_by_contract.png" alt="Churn Rate by Contract Type">
+                    <img src="images/churn_by_contract.png" alt="Churn by Contract Type">
                     <h4>Churn Distribution by Contract Type</h4>
-                    <p>Compares attrition rates across month-to-month, one-year, and two-year customer contracts.</p>
+                    <p>Demonstrates significantly higher attrition among month-to-month subscribers compared to annual contracts.</p>
                 </div>
                 <div class="chart-card">
-                    <img src="images/tenure_vs_charges.png" alt="Tenure and Monthly Charges Analysis">
-                    <h4>Tenure vs. Monthly Charges</h4>
-                    <p>Shows how higher monthly billing in early tenure months accelerates customer drop-off.</p>
+                    <img src="images/tenure_vs_churn.png" alt="Tenure vs Churn Boxplot">
+                    <h4>Customer Tenure vs. Churn</h4>
+                    <p>Boxplot comparison showing that customers who churn have substantially shorter median tenure.</p>
+                </div>
+                <div class="chart-card">
+                    <img src="images/monthly_charges_vs_churn.png" alt="Monthly Charges vs Churn Boxplot">
+                    <h4>Monthly Charges vs. Churn</h4>
+                    <p>Highlights higher median monthly charges among churned customers compared to retained users.</p>
                 </div>
             </div>
         </section>
@@ -269,6 +269,7 @@
                 <span class="tag">Python</span>
                 <span class="tag">Pandas</span>
                 <span class="tag">NumPy</span>
+                <span class="tag">Matplotlib & Seaborn</span>
                 <span class="tag">Scikit-Learn</span>
                 <span class="tag">Logistic Regression</span>
                 <span class="tag">Random Forest</span>
